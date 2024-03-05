@@ -1,0 +1,43 @@
+body{
+    display: grid;
+    text-align: center;
+    background-color: teal;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    gap: 50px;
+}
+h1{
+    color: white;
+}
+
+.display{
+    width: 20%;
+    border: 5px solid red;
+    border-radius: 20px;
+    margin: auto;
+    filter: drop-shadow(0 0 30px rgb(255, 0, 0));
+    animation: glow 2s alternate infinite;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bolder;
+    background-color: white;
+}
+@keyframes glow{
+    0%{
+        filter: drop-shadow(0 0 30px red);
+    }
+    100%{
+        filter: drop-shadow(0 0 60px red);
+    }
+}
+
+@media (max-width: 600px) {
+    .display{
+        width: 70%;
+    }
+  }
+  
+  @media (min-width: 601px) and (max-width: 900px) {
+    .display{
+        width: 50%;
+    }
+  }
